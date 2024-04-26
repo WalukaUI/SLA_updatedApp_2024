@@ -1,0 +1,76 @@
+.vgr-cards .card {
+  display: flex;
+  flex-flow: wrap;
+  flex: 100%;
+  padding: 20px;
+}
+.vgr-cards :nth-child(even) .card-img-body {
+  order: 2;
+}
+
+.vgr-cards :nth-child(even) .card-body {
+  padding-left: 0;
+  padding-right: 1.25rem;
+}
+
+.card-img-body {
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+}
+
+.card-img {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+
+@media only screen and (max-width: 1140px) {
+  .card-img {
+    margin: 0;
+    transform: none;
+    width: 100%;
+    height: auto;
+  }
+}
+
+.card-body {
+  flex: 2;
+  padding: 0 0 0 1.25rem;
+}
+
+.eventOuter {
+  margin-top: 10px;
+  opacity: 0.9;
+  background-color: rgb(221, 221, 238);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.maintextfield {
+  font-size: 1.2rem;
+}
+@media only screen and (max-width: 767px) {
+  .eventOuter {
+    margin-left: 20px;
+    padding-top: 10px;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .eventOuter {
+    margin: 0px;
+  }
+  .card-body {
+    padding: 0;
+  }
+  .card-img {
+    padding-right: 10px;
+  }
+  .vgr-cards {
+    display: block;
+  }
+}

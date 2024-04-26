@@ -1,0 +1,23 @@
+.aboutUsOuter{
+    margin-top: 10px;
+    padding-left: 20px;
+    opacity: 0.9;
+    background-color: rgb(221, 221, 238);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+@media only screen and (max-width: 767px) {
+    .aboutUsOuter{
+        margin-left: 20px;
+        padding-top: 10px;
+    } 
+  }
+  @media only screen and (max-width: 576px) {
+    .aboutUsOuter{
+        margin: 0;
+    } 
+    
+  }
