@@ -1,5 +1,5 @@
 import React from "react";
-import {BrowserRouter as Router,Route,Redirect,Switch,} from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import "./main.css";
 import About from "./About/About";
 import Contact from "./Contact/Contact";
@@ -19,26 +19,24 @@ function MainBody() {
       <video className="videoTag" autoPlay loop muted>
         <source src={flag} type="video/mp4" />
       </video>
-      <Router>
         <Navbar />
         <div className="row mainRow">
           <div className="col-md-8 mainDiv2">
-            <Switch>
-              <Route path="/" exact><Carosel /></Route>
-              <Route path="/about" exact><About /></Route>
-              <Route path="/events" exact><Events /></Route>
-              <Route path="/history" exact><History /></Route>
-              <Route path="/members" exact><Members /></Route>
-              <Route path="/create" exact><BecomeAmem /></Route>
-              <Route path="/contact" exact><Contact /></Route>
-              <Redirect to="/" />
-            </Switch>
+            <Routes>
+              <Route path="/" element={<Carosel/>}/>
+              <Route path="/about" element={<About/>}/>
+              <Route path="/events" element={<Events/>}/>
+              <Route path="/history" element={<History/>}/>
+              <Route path="/members" element={<Members/>}/>
+              <Route path="/create" element={<BecomeAmem/>}/>
+              <Route path="/contact" element={<Contact/>}/>
+              {/* <Redirect to="/" /> */}
+            </Routes>
           </div>
           <div className="col-md-4  mainDiv1">
             <SideBar />
           </div>
         </div>
-      </Router>
       <Footer />
     </div>
   );
