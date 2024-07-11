@@ -30,7 +30,6 @@ function MainBody() {
               <Route path="/members" element={<Members/>}/>
               <Route path="/create" element={<BecomeAmem/>}/>
               <Route path="/contact" element={<Contact/>}/>
-              {/* <Redirect to="/" /> */}
             </Routes>
           </div>
           <div className="col-md-4  mainDiv1">
